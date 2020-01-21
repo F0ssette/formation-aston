@@ -1,0 +1,37 @@
+body {
+    font-family: monospace;
+    background-color: #100077;
+}
+
+.container {
+    width: 800px;
+    height: 400px;
+    background-color: #acacacc9;
+    margin: 0 auto;
+    display: flex;
+
+    /* Flex direction : axe principale */
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* Pour aligner les boxes dans leur espace */ 
+    align-items: stretch;
+}
+
+.box2 {
+    align-self: flex-end;
+}
+
+.box3 {
+    align-self: flex-start;
+}
+
+.box {
+    width: 80px;
+   /* height: 80px;*/
+    background-color: #1ca0f1;
+    border: 1px solid #010168;
+    text-align: center;
+    line-height: 80px;
+    color: #100077;
+}
