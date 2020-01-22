@@ -1,0 +1,33 @@
+body {
+    background-image: url('paysage.jpg');
+    background-size: cover;
+    font-family: Calibri;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html, body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #00144e49;
+    color: #00144e;
+    display: flex;
+
+}
+
+.navbar .navbar-item {
+    margin-right: 50px;
+}
+
+.navbar a {
+    color: inherit;
+}
