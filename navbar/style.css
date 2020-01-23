@@ -2,6 +2,7 @@ body {
     background-image: url('paysage.jpg');
     background-size: cover;
     font-family: Calibri;
+    font-size: 2em;
 }
 
 a {
@@ -21,13 +22,37 @@ html, body, ul, li {
     background-color: #00144e49;
     color: #00144e;
     display: flex;
-
-}
-
-.navbar .navbar-item {
-    margin-right: 50px;
+    /* position: sticky;
+    top: 10px; */
 }
 
 .navbar a {
+    display: block;
     color: inherit;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    color: white;
+    background-color: #00144e;
+}
+
+.navbar-dropdown {
+    position: relative;
+}
+
+.navbar-dropdown > ul {
+    background-color: #00144e49;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.navbar-dropdown:hover > ul {
+    left: 0;
+    top: initial;
+    opacity: 1;
 }
