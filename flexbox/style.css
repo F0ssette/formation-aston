@@ -1,0 +1,69 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    /* le box-sizing recalcule la taille de la boîte pour qu'elle fasse toujours les 80 px */
+}
+
+body {
+    font-family: monospace;
+    background-color: #100077;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #eba92f;
+}
+
+.container {
+    background-color: #acacacc9;
+    display: flex;
+    /* Flex direction : axe principale qui détermine le positionnement de toutes les boxes */
+    flex-direction: column;
+}
+
+.box {
+    /* width: 80px; */
+    /* height: 80px; */
+    background-color: #1ca0f1;
+    border: 5px solid #010168;
+    color: #100077;
+    padding: 20px;
+    text-align: justify;
+}
+
+.sticky-card {
+    position: sticky;
+    top: 10px;
+}
+
+.moon {
+    position: sticky;
+    top: 500px;
+    width: 65%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    .box1, .box3 {
+        width: 70%;
+    }
+    .box2 {
+        background-color: #36ccd199;
+    }
+    .astronaut {
+        width: 60%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        animation: fly 10s infinite;
+    }
+}
+
+@keyframes fly {
+    50% {
+        transform: translateY(380px) translateX(-50%) rotateX(30deg);
+    }
+}
