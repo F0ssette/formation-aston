@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fonctions</title>
+</head>
+
+<body>
+
+    <script>
+
+        function sayHello(name) {
+            return "Hello " + name + "   !";
+        }
+
+        console.log(sayHello('Tarzan').toUpperCase());
+        console.log(sayHello('Jane').toLowerCase());
+        console.log(sayHello('Geralt'));
+
+        var jaskier = function () {
+            return 'Toss a coin to your Witcher...';
+        };
+        console.log(jaskier());
+
+        var doubleNumber = function (x) {
+            return x * 2;
+        }
+        console.log(doubleNumber(21));
+
+        var greeting = sayHello;
+        console.log(greeting('Ciri'));
+
+        (function () {
+            console.log("Oh Valley of plenty !")
+        }());
+
+        // let fk = (name) => {
+        //     return "Good bye " + name;
+        // };
+
+        // C'est une fonction fléchée ou en anglais : arrow function
+        let fk = name => "Good bye " + name;
+        console.log(fk('Batman'));
+
+        function test() {
+            function test2() {
+                console.log(this);
+            }
+            test2();
+        }
+
+        test();
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- () quand c'est vide, c'est qu'il n'y a pas d'arguments.
+Idéalement, une fonction n'est jamais écrite 2 fois. Ainsi, ça évite d'avoir à la modifier partout, c'est pour ça qu'on lui donne un nom.
+
+Quand quelqu'un fait appel à ma fonction, il doit me donner son nom. Donc on ajoute (name) et dans la fonction on concatène.
+
+Le return permet de retourner ce qu'il se passe dans la fonction. Ainsi, la fonction sayHello retourne "Hello " + nom et on peut ensuite modifier cette fonction en utilisant des méthodes comme toUpperCase()
+
+Une fonction en Javascript peut aussi servir d'objet. 
+
+let est le nouveau var
+
+=> permet de ne pas écrire le mot fonction, mais sinon c'est la même chose.
+
+Attention avec "this" qui ne veut pas dire la même chose selon le moment où on l'appel.
+Si "this" n'est rattaché à rien, il renverra window
+-->

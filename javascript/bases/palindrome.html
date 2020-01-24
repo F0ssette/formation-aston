@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Palindrome</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Le Grand Jeu du Palindrome</h1>
+
+        <label for="word">Ce mot est-il un Palindrome ? </label>
+        <input type="text" id="word" class="pla-input" placeholder="ressasser">
+
+        <p>Bravo ! <span id="result" class="pal-result"></span> est bien un Palindrome !</p>
+    </div>
+
+    <script>
+
+        let palString = document.querySelector('#word');
+        let result = document.querySelector('#result');
+
+        palString.addEventListener('keyup', function(event){
+
+            if (event.keyCode === 13 && palString.value) {
+                var word = palString.value;
+                console.log(word);
+
+                palString.value ='';
+            }
+        });
+
+        function isPalindrom(word) {
+            let len = word.length;
+
+            if (len === 0 || len === 1) {
+                result = 'Ce mot est un palindrome';
+            }
+
+            if (word.slice(0, 1) !== word.slice(-1)) {
+                result = 'Ce n\'est pas un palindrome';
+            }
+
+            return isPalindrom(word.slice(1, -1));
+        }
+
+        let ok = isPalindrom('palindrome');
+        console.log(ok);
+
+
+
+    </script>
+
+</body>
+
+</html>
