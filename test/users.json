@@ -1,0 +1,13 @@
+{
+    "fisrtname": "Jane",
+    "lastname": "Doe",
+    "age": 30,
+    "is_active": true,
+    "adresses": {
+        "street": "8 Baker Street"
+    },
+    "phones": [
+        "+33 (0)123456789",
+        "+33 (0)987654321"
+    ]
+}
